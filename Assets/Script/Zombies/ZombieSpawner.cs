@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class NewBehaviourScript : MonoBehaviour
+[System.Serializable]
+public class ZombieSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float movingSpeed = 1f;
-    public float BitingSpeed = 1f;
-    public float health = 1f;
     
+    public List<ZombieScript> zombies;
     void Start()
     {
         
