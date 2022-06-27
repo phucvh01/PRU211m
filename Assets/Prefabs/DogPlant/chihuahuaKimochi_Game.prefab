@@ -93,6 +93,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   isShoot: 0
+  bullet: {fileID: 0}
+  ptype: 2
+  plantShootSpeed: 0
 --- !u!225 &-546507599358332384
 CanvasGroup:
   m_ObjectHideFlags: 0

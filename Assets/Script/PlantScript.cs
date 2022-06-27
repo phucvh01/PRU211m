@@ -6,24 +6,44 @@ public class PlantScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public int health = 1;
-    public bool isShoot = false;
+    public bool isShoot;
     public GameObject bullet;
-   
+    public enum plantType { Shooter, Bomber, Money }
+    public plantType Ptype;
+
+    public float plantShootSpeed;
+
 
     void Start()
     {
-        isShoot = true;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //shootbullet();
+        
+        if (Ptype == plantType.Shooter)
+        {
+            isShoot = true;
+
+        }
+        else if (Ptype == plantType.Bomber)
+        {
+
+        }
+        else if (Ptype == plantType.Money)
+        {
+
+        }
     }
     void shootbullet()
     {
-        if (isShoot == true) {
-        StartCoroutine(bulletshoot(1)); }
+        if (isShoot == true)
+        {
+            StartCoroutine(bulletshoot(1));
+        }
     }
 
     IEnumerator bulletshoot(float duration)
@@ -36,7 +56,8 @@ public class PlantScript : MonoBehaviour
         }
 
         //thoat while la ket thuc timer
-        isShoot = true;
-      
+        isShoot = false;
+        Debug.Log("wait");
+
     }
 }
