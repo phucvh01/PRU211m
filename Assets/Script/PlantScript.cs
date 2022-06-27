@@ -13,6 +13,7 @@ public class PlantScript : MonoBehaviour
 
     public float plantShootSpeed;
 
+    public GameObject coinPrefabs;
 
     void Start()
     {
@@ -26,16 +27,18 @@ public class PlantScript : MonoBehaviour
         
         if (Ptype == plantType.Shooter)
         {
+            //shoot ahead
+
             isShoot = true;
 
         }
         else if (Ptype == plantType.Bomber)
         {
-
+            //destroy all zombie tag
         }
         else if (Ptype == plantType.Money)
         {
-
+            //spawn money here
         }
     }
     void shootbullet()
