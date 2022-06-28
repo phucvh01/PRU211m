@@ -5,15 +5,19 @@ using UnityEngine;
 public class PlantScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int health = 1;
+    public int health = 10;
     public bool isShoot;
-    public GameObject bullet;
+    public float Damage;
+    public float attackCooldown;
+    public float attackTime;
+
     public enum plantType { Shooter, Bomber, Money }
     public plantType Ptype;
 
-    public float plantShootSpeed;
 
+    public GameObject bullet;
     public GameObject coinPrefabs;
+    public List<GameObject> zombies;
 
     void Start()
     {
@@ -24,11 +28,11 @@ public class PlantScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (Ptype == plantType.Shooter)
         {
             //shoot ahead
-
+            shootbullet();
             isShoot = true;
 
         }
@@ -43,24 +47,31 @@ public class PlantScript : MonoBehaviour
     }
     void shootbullet()
     {
-        if (isShoot == true)
+        if (zombies.Count > 0 && isShoot == false)
         {
-            StartCoroutine(bulletshoot(1));
+            Debug.Log("Im here");
+            isShoot = true;
+            if (attackTime <= Time.time)
+            {
+                Debug.Log("Im also here");
+                var a= Instantiate(bullet, transform);
+                Debug.Log(a.transform.name.ToString());
+                attackTime = Time.time + attackCooldown;
+                isShoot = false;
+            }
+
         }
+        else if (zombies.Count == 0 && isShoot == true)
+        {
+            isShoot = false;
+            Debug.Log("Im out");
+        }
+        else
+        {
+            isShoot = false;
+        }
+
     }
 
-    IEnumerator bulletshoot(float duration)
-    {
-        float normalizedTime = 0;
-        while (normalizedTime <= 1f)
-        {
-            normalizedTime += Time.deltaTime / duration;
-            yield return null;
-        }
 
-        //thoat while la ket thuc timer
-        isShoot = false;
-        Debug.Log("wait");
-
-    }
 }

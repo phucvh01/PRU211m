@@ -10,6 +10,7 @@ public class ContainerScript : MonoBehaviour
     public GameManager gameManager;
     private Image image;
     public PlantCardScript plantCardScript;
+    public SpawnPoint spawnPoint;
     private void Start()
     {
         image = this.GetComponent<Image>();

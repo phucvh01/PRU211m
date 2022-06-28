@@ -18,8 +18,9 @@ public class GameManager : MonoBehaviour
     {
         if (draggingGameobject != null && containerGameobject != null)
         {
-            Debug.Log(draggingGameobject.GetComponent<ObjectDragging>().card.Game_Plant.name.ToString());
-            Instantiate(draggingGameobject.GetComponent<ObjectDragging>().card.Game_Plant, containerGameobject.transform);
+            
+            GameObject objectGame = Instantiate(draggingGameobject.GetComponent<ObjectDragging>().card.Game_Plant, containerGameobject.transform);
+            objectGame.GetComponent<PlantScript>().zombies = containerGameobject.GetComponent<ContainerScript>().spawnPoint.zombies;
             containerGameobject.GetComponent<ContainerScript>().isFull = true;
         }
     }

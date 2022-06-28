@@ -23,7 +23,7 @@ public class CoinSpawner : MonoBehaviour
     }
     void spawnCoin()
     {
-        Debug.Log("Spawm a coin");
+        //Debug.Log("Spawm a coin");
         var a = Instantiate(coinprefab, transform.position,coinprefab.transform.rotation,coinPool.transform);
         
        

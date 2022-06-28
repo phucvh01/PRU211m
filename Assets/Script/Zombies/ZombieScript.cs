@@ -6,9 +6,13 @@ public class ZombieScript
 {
     // Start is called before the first frame update
  
-    public enum ZombieType { normal, tank, speed };
+   public float spawnTime;
     public ZombieType type;
-    public float spawnTime;
+    
+    public int Spawner;
+    public bool randomSpawner;
+    public bool isSpawn;
 
-   
+
 }
+public enum ZombieType { normal, tank, speed }

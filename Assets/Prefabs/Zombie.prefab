@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6422381773118457625
+--- !u!1 &1568884363286161678
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,27 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2668578575554541082}
-  - component: {fileID: 4416405324677063169}
-  - component: {fileID: 143442324693761931}
-  - component: {fileID: 2885685706288323800}
-  - component: {fileID: -546507599358332384}
-  - component: {fileID: 5833556127240613772}
-  - component: {fileID: -6074320235193532565}
-  m_Layer: 8
-  m_Name: chobacha_Game
-  m_TagString: Untagged
+  - component: {fileID: 1568884363286161677}
+  - component: {fileID: 1568884363286161675}
+  - component: {fileID: 1568884363286161676}
+  - component: {fileID: 1994409334066551035}
+  - component: {fileID: -8816370391823201234}
+  - component: {fileID: -564628293662385091}
+  m_Layer: 10
+  m_Name: Zombie
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2668578575554541082
+--- !u!224 &1568884363286161677
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422381773118457625}
+  m_GameObject: {fileID: 1568884363286161678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -39,23 +38,23 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 158.028}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4416405324677063169
+--- !u!222 &1568884363286161675
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422381773118457625}
+  m_GameObject: {fileID: 1568884363286161678}
   m_CullTransparentMesh: 1
---- !u!114 &143442324693761931
+--- !u!114 &1568884363286161676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422381773118457625}
+  m_GameObject: {fileID: 1568884363286161678}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -69,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 86324a8bce49d9f4692d66817a74b5fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -79,53 +78,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2885685706288323800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422381773118457625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d51304fe593f7244785635ef377b2d4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  isShoot: 0
-  Damage: 0
-  attackCooldown: 1
-  attackTime: 0
-  Ptype: 0
-  bullet: {fileID: 1988595352653513130, guid: 8ae91fec551bb574daa84744ea6a2216, type: 3}
-  coinPrefabs: {fileID: 6851830310225239962, guid: 6abf1e3c4865ee74a86582277fbf10c5, type: 3}
-  zombies: []
---- !u!225 &-546507599358332384
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422381773118457625}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!61 &5833556127240613772
+--- !u!61 &1994409334066551035
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422381773118457625}
+  m_GameObject: {fileID: 1568884363286161678}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -8.62, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -136,26 +102,42 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 99, y: 96.5}
+  m_Size: {x: 47.34, y: 59.4}
   m_EdgeRadius: 0
---- !u!114 &-6074320235193532565
+--- !u!114 &-8816370391823201234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422381773118457625}
+  m_GameObject: {fileID: 1568884363286161678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d51304fe593f7244785635ef377b2d4e, type: 3}
+  m_Script: {fileID: 11500000, guid: ddb09f435acf4cf46ac9f11c14ee5f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  isShoot: 0
+  finalDestination: {x: 0, y: 0, z: 0}
+  Health: 10
   Damage: 1
-  attackCooldown: 1
-  attackTime: 1
-  Ptype: 0
-  bullet: {fileID: 1988595352653513130, guid: 8ae91fec551bb574daa84744ea6a2216, type: 3}
-  coinPrefabs: {fileID: 6851830310225239962, guid: 6abf1e3c4865ee74a86582277fbf10c5, type: 3}
-  zombies: []
+  Speed: 0.5
+--- !u!50 &-564628293662385091
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568884363286161678}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

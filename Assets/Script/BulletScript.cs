@@ -16,6 +16,6 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(new Vector3(bulletSpeed, 0, 0));
     }
 }

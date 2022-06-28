@@ -148,11 +148,11 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100688540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 114.23983}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1888290013}
-  m_RootOrder: 2
+  m_Father: {fileID: 1863131597}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -168,12 +168,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100688540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b198cc40fce1304d8c45fe2c903bb56, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e126af41f5f4d9479bc0284137501d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombies:
-  - type: 0
-    spawnTime: 0
+  Destination: {x: -84, y: -271.5228, z: 0}
+  zombies: []
 --- !u!1 &120735646
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +353,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 443336245}
 --- !u!61 &187227335
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -539,6 +539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 300721131}
+  - component: {fileID: 300721132}
   m_Layer: 5
   m_Name: ZombieSpawner (3)
   m_TagString: Untagged
@@ -554,17 +555,31 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300721130}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 114.23983}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1888290013}
-  m_RootOrder: 5
+  m_Father: {fileID: 1863131597}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1466.309, y: -898.5228}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &300721132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300721130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e126af41f5f4d9479bc0284137501d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destination: {x: -84, y: -898.5228, z: 0}
+  zombies: []
 --- !u!1 &329831894
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443336244}
+  - component: {fileID: 443336245}
   m_Layer: 5
   m_Name: ZombieSpawner (2)
   m_TagString: Untagged
@@ -925,17 +941,31 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443336243}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 114.23983}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1888290013}
-  m_RootOrder: 4
+  m_Father: {fileID: 1863131597}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1466.309, y: -682.5228}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &443336245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443336243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e126af41f5f4d9479bc0284137501d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destination: {x: -84, y: -682.5228, z: 0}
+  zombies: []
 --- !u!1 &471640972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,6 +1095,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 100688542}
 --- !u!61 &504866380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1183,6 +1214,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 992671513}
 --- !u!61 &514830568
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1571,6 +1603,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 992671513}
 --- !u!61 &706039368
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1634,81 +1667,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706039365}
-  m_CullTransparentMesh: 1
---- !u!1 &786270577
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 786270578}
-  - component: {fileID: 786270580}
-  - component: {fileID: 786270579}
-  m_Layer: 5
-  m_Name: Zombie
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &786270578
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786270577}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1529730545}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 768, y: 202}
-  m_SizeDelta: {x: 100, y: 158.028}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &786270579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786270577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 86324a8bce49d9f4692d66817a74b5fa, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &786270580
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786270577}
   m_CullTransparentMesh: 1
 --- !u!1 &807854432
 GameObject:
@@ -1799,6 +1757,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 992671513}
 --- !u!61 &875038381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1917,6 +1876,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 300721132}
 --- !u!61 &883442978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1990,6 +1950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 992671512}
+  - component: {fileID: 992671513}
   m_Layer: 5
   m_Name: ZombieSpawner (1)
   m_TagString: Untagged
@@ -2005,17 +1966,31 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992671511}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 114.23983}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1888290013}
-  m_RootOrder: 3
+  m_Father: {fileID: 1863131597}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1466.309, y: -473.52283}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &992671513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992671511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e126af41f5f4d9479bc0284137501d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destination: {x: -84, y: -473.5228, z: 0}
+  zombies: []
 --- !u!1 &1059598913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,6 +2045,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 300721132}
 --- !u!61 &1059598916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2346,7 +2322,7 @@ RectTransform:
   - {fileID: 330577011}
   - {fileID: 519270694}
   m_Father: {fileID: 1529730545}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2445,6 +2421,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 443336245}
 --- !u!61 &1281384336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2615,6 +2592,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 443336245}
 --- !u!61 &1367856413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2733,6 +2711,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 300721132}
 --- !u!61 &1402779392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2851,6 +2830,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 100688542}
 --- !u!61 &1512790492
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3008,7 +2988,6 @@ RectTransform:
   m_Children:
   - {fileID: 331073038}
   - {fileID: 122642511}
-  - {fileID: 786270578}
   - {fileID: 1888290013}
   - {fileID: 1229207349}
   m_Father: {fileID: 0}
@@ -3073,6 +3052,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 992671513}
 --- !u!61 &1572805930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3191,6 +3171,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 100688542}
 --- !u!61 &1621826937
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3309,6 +3290,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 443336245}
 --- !u!61 &1657260173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3462,6 +3444,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 300721132}
 --- !u!61 &1752248123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3526,6 +3509,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752248120}
   m_CullTransparentMesh: 1
+--- !u!1 &1863131596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863131597}
+  - component: {fileID: 1863131598}
+  m_Layer: 0
+  m_Name: ZombiesSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1863131597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863131596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 100688541}
+  - {fileID: 992671512}
+  - {fileID: 443336244}
+  - {fileID: 300721131}
+  m_Father: {fileID: 1888290013}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1863131598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863131596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b198cc40fce1304d8c45fe2c903bb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombies:
+  - spawnTime: 1
+    type: 0
+    Spawner: 0
+    randomSpawner: 1
+    isSpawn: 0
+  - spawnTime: 2
+    type: 0
+    Spawner: 1
+    randomSpawner: 1
+    isSpawn: 0
+  - spawnTime: 6
+    type: 0
+    Spawner: 2
+    randomSpawner: 1
+    isSpawn: 0
+  zombiePrefabs:
+  - {fileID: 1568884363286161678, guid: 82a93d98af89dd24986ce0f99f86f4f5, type: 3}
 --- !u!1 &1888290012
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,12 +3603,9 @@ Transform:
   m_Children:
   - {fileID: 1289694007}
   - {fileID: 1733715771}
-  - {fileID: 100688541}
-  - {fileID: 992671512}
-  - {fileID: 443336244}
-  - {fileID: 300721131}
+  - {fileID: 1863131597}
   m_Father: {fileID: 1529730545}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1964167076
 GameObject:
@@ -3616,6 +3661,7 @@ MonoBehaviour:
   isFull: 0
   gameManager: {fileID: 0}
   plantCardScript: {fileID: 0}
+  spawnPoint: {fileID: 100688542}
 --- !u!61 &1964167079
 BoxCollider2D:
   m_ObjectHideFlags: 0
