@@ -93,7 +93,7 @@ public class PlantCardScript : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         }
 
         //thoat while la ket thuc timer
-        Debug.Log("outt");
+        //Debug.Log("outt");
         plantDrop = true;
         this.GetComponent<CanvasGroup>().alpha = 1f;
         loadingCooldown.enabled = false;

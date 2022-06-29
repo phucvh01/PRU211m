@@ -18,6 +18,9 @@ public class PlantScript : MonoBehaviour
     
     public GameObject bullet;
     public GameObject coinPrefabs;
+    public GameObject slot1=null;
+    public GameObject slot2=null;
+
     public List<GameObject> zombies;
 
     void Start()

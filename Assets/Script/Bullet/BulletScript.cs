@@ -28,6 +28,7 @@ public class BulletScript : MonoBehaviour
     {
         Debug.Log("HIt");
         collision.gameObject.GetComponent<ZombieController>().receiveDamage(bulletDamage);
+        
         Destroy(this.gameObject);
     }
 }
