@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject draggingGameobject;
     public GameObject containerGameobject;
+    public GameObject powerupGameobject; 
     public static GameManager instance;
 
     private void Awake()
@@ -23,5 +24,9 @@ public class GameManager : MonoBehaviour
             objectGame.GetComponent<PlantScript>().zombies = containerGameobject.GetComponent<ContainerScript>().spawnPoint.zombies;
             containerGameobject.GetComponent<ContainerScript>().isFull = true;
         }
+    }
+    public void placePowerup()
+    {
+
     }
 }

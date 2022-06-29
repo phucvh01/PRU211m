@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5833556127240613772}
   m_Layer: 8
   m_Name: chobacha_Game
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

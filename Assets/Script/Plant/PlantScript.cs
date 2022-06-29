@@ -14,7 +14,8 @@ public class PlantScript : MonoBehaviour
     public enum plantType { Shooter, Bomber, Money }
     public plantType Ptype;
 
-
+    //need power type here
+    
     public GameObject bullet;
     public GameObject coinPrefabs;
     public List<GameObject> zombies;
@@ -30,11 +31,13 @@ public class PlantScript : MonoBehaviour
             Damage = 10;
             timeLeft = 3f;
             waitTime = 3f;
+            
 
         }
         else if (Ptype == plantType.Bomber)
         {
             health = 100;
+            
 
         }
         else if (Ptype == plantType.Money)
@@ -42,7 +45,7 @@ public class PlantScript : MonoBehaviour
             health = 5;
             timeLeft = 3f;
             waitTime = 3f;
-
+            
             //spawn money here
         }
 
@@ -70,6 +73,7 @@ public class PlantScript : MonoBehaviour
     }
     void shootbullet()
     {
+        //need sound and vfx here
         if (zombies.Count > 0 && isShoot == false)
         {
             

@@ -29,13 +29,22 @@ public class ZombieController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 8 &&collision.gameObject.tag!="Player")
         {
             Debug.Log("Collde");
             isStopped = true;
         }
         
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 8 && collision.gameObject.tag != "Player")
+        {
+            Debug.Log("Collde");
+            isStopped = false;
+        }
+    }
+
     public void receiveDamage(int damage)
     {
         if (Health - damage <= 0)
