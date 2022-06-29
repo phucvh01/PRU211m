@@ -18,15 +18,16 @@ public class BulletScript : MonoBehaviour
     {
         transform.Translate(new Vector3(bulletSpeed, 0, 0));
     }
-    private void OnCollisonEnter2D(Collision2D collision)
+  
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 10) { 
-            Debug.Log("Hit");
-            collision.gameObject.GetComponent<ZombieController>().receiveDamage(bulletDamage);
-            Destroy(this.gameObject);
+         Debug.Log("Hit");
             
-}
-        
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("HIt");
+        collision.gameObject.GetComponent<ZombieController>().receiveDamage(bulletDamage);
+        Destroy(this.gameObject);
+    }
 }
