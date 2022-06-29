@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlantScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int health = 10;
+    public int health;
     public bool isShoot;
     public float Damage;
-    public float attackCooldown;
-    public float attackTime;
 
+    public float timeLeft = 10f;
+    public float waitTime = 10f;
     public enum plantType { Shooter, Bomber, Money }
     public plantType Ptype;
 
@@ -23,6 +23,29 @@ public class PlantScript : MonoBehaviour
     {
 
 
+        if (Ptype == plantType.Shooter)
+        {
+            //shoot ahead
+            health = 10;
+            Damage = 10;
+            timeLeft = 3f;
+            waitTime = 3f;
+
+        }
+        else if (Ptype == plantType.Bomber)
+        {
+            health = 100;
+
+        }
+        else if (Ptype == plantType.Money)
+        {
+            health = 5;
+            timeLeft = 3f;
+            waitTime = 3f;
+
+            //spawn money here
+        }
+
     }
 
     // Update is called once per frame
@@ -33,42 +56,56 @@ public class PlantScript : MonoBehaviour
         {
             //shoot ahead
             shootbullet();
-            isShoot = true;
+            
 
         }
         else if (Ptype == plantType.Bomber)
         {
-            //destroy all zombie tag
+
         }
         else if (Ptype == plantType.Money)
         {
-            //spawn money here
+            spawnCoin();
         }
     }
     void shootbullet()
     {
         if (zombies.Count > 0 && isShoot == false)
         {
-            Debug.Log("Im here");
-            isShoot = true;
-            if (attackTime <= Time.time)
+            
+            
+            timeLeft -= Time.deltaTime;
+            //Debug.Log(timeLeft);
+            if (timeLeft < 0)
             {
-                Debug.Log("Im also here");
-                var a= Instantiate(bullet, transform);
-                Debug.Log(a.transform.name.ToString());
-                attackTime = Time.time + attackCooldown;
+                //Debug.Log("Spawn here");
+                timeLeft = waitTime;
+                var a = Instantiate(bullet, transform);
+                //Debug.Log("again");
                 isShoot = false;
             }
 
         }
         else if (zombies.Count == 0 && isShoot == true)
         {
+            //Debug.Log(zombies.Count+"");
+            Debug.Log(isShoot);
             isShoot = false;
             Debug.Log("Im out");
         }
-        else
+      
+
+    }
+    void spawnCoin()
+    {
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0)
         {
-            isShoot = false;
+
+            timeLeft = waitTime;
+            var a = Instantiate(coinPrefabs, transform.position, coinPrefabs.transform.rotation, this.transform);
+            a.GetComponent<CoinScript>().speedFall = 1f;
+
         }
 
     }

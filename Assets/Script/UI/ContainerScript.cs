@@ -19,17 +19,22 @@ public class ContainerScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Player") {
         if (gameManager.draggingGameobject != null && isFull == false)
         {
             gameManager.containerGameobject = this.gameObject;
             //insert plant drop here
 
             image.enabled = true;
-        }
+        } }
+        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        gameManager.containerGameobject = null;
-        image.enabled = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            gameManager.containerGameobject = null;
+            image.enabled = false;
+        }
     }
 }

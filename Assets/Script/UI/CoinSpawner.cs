@@ -7,7 +7,7 @@ public class CoinSpawner : MonoBehaviour
 {
     public GameObject coinprefab;
     public GameObject coinPool;
-    public float timeLeft=5;
+    public float timeLeft=10f;
     public Text coinText;
     public static int coin = 0;
     private void Update()
@@ -16,7 +16,7 @@ public class CoinSpawner : MonoBehaviour
         if (timeLeft < 0)
         {
             spawnCoin();
-            timeLeft = 5f;
+            timeLeft = 10f;
         }
         coinText.text = coin+ "";
 
@@ -24,8 +24,8 @@ public class CoinSpawner : MonoBehaviour
     void spawnCoin()
     {
         //Debug.Log("Spawm a coin");
-        var a = Instantiate(coinprefab, transform.position,coinprefab.transform.rotation,coinPool.transform);
-        
+        var a = Instantiate(coinprefab,new Vector2((float)Random.Range(400,1700),transform.position.y),coinprefab.transform.rotation,coinPool.transform);
+       // Debug.Log(a.transform.position.x);
        
     }
 

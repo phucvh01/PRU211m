@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 2885685706288323800}
   - component: {fileID: -546507599358332384}
   - component: {fileID: 5833556127240613772}
-  - component: {fileID: -6074320235193532565}
   m_Layer: 8
   m_Name: chobacha_Game
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,9 +93,9 @@ MonoBehaviour:
   health: 1
   isShoot: 0
   Damage: 0
-  attackCooldown: 1
-  attackTime: 0
-  Ptype: 0
+  timeLeft: 10
+  waitTime: 10
+  Ptype: 2
   bullet: {fileID: 1988595352653513130, guid: 8ae91fec551bb574daa84744ea6a2216, type: 3}
   coinPrefabs: {fileID: 6851830310225239962, guid: 6abf1e3c4865ee74a86582277fbf10c5, type: 3}
   zombies: []
@@ -138,24 +137,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 99, y: 96.5}
   m_EdgeRadius: 0
---- !u!114 &-6074320235193532565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422381773118457625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d51304fe593f7244785635ef377b2d4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  isShoot: 0
-  Damage: 1
-  attackCooldown: 1
-  attackTime: 1
-  Ptype: 0
-  bullet: {fileID: 1988595352653513130, guid: 8ae91fec551bb574daa84744ea6a2216, type: 3}
-  coinPrefabs: {fileID: 6851830310225239962, guid: 6abf1e3c4865ee74a86582277fbf10c5, type: 3}
-  zombies: []

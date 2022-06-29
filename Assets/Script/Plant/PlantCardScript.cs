@@ -18,7 +18,7 @@ public class PlantCardScript : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public RectTransform panelImg;
 
     public bool plantDrop = true;
-
+    public int Price;
     private GameObject objectDragInstatiate;
 
     public GameManager gameManager;
@@ -58,7 +58,7 @@ public class PlantCardScript : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         gameManager.draggingGameobject = null;
         
         Destroy(objectDragInstatiate);
-      
+      //check to make poiter different
         if (plantDrop == true)
         {
             this.GetComponent<CanvasGroup>().alpha = 0.6f;

@@ -16,7 +16,7 @@ public class ZombieController : MonoBehaviour
     private bool isStopped;
     private void Start()
     {
-
+        
 
     }
     // Update is called once per frame
@@ -33,6 +33,21 @@ public class ZombieController : MonoBehaviour
         {
             Debug.Log("Collde");
             isStopped = true;
+        }
+        
+    }
+    public void receiveDamage(int damage)
+    {
+        if (Health - damage <= 0)
+        {
+            transform.parent.GetComponent<SpawnPoint>().zombies.Remove(this.gameObject);
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            
+            Health = Health - damage;
+            Debug.Log(Health);
         }
     }
 }
