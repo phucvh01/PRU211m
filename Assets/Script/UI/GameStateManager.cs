@@ -41,6 +41,6 @@ public class GameStateManager : MonoBehaviour
     }
     public void BackToMainMenu()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

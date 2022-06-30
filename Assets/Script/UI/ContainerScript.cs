@@ -20,6 +20,7 @@ public class ContainerScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") {
+            //isFull wrong here
         if (gameManager.draggingGameobject != null && isFull == false)
         {
             gameManager.containerGameobject = this.gameObject;
@@ -28,6 +29,10 @@ public class ContainerScript : MonoBehaviour
             image.enabled = true;
         } }
         
+    }
+    private void Update()
+    {
+      
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

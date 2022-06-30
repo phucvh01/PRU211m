@@ -98,14 +98,18 @@ public class ZombieController : MonoBehaviour
         int healthh = plantHealth.GetComponent<PlantScript>().health;
 
         if (healthh - Damage <= 0)
-        {
+        { 
+            //might be false
+            plantHealth.GetComponentInParent<ContainerScript>().isFull = false;
             Destroy(plantHealth.gameObject);
+            //viet lai is full =false o day la dc
 
         }
         else
         {
             healthh = healthh - Damage;
             plantHealth.GetComponent<PlantScript>().health = healthh;
+           
             //Debug.Log(healthh+"");
         }
     }
