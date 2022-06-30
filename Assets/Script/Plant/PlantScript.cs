@@ -20,7 +20,7 @@ public class PlantScript : MonoBehaviour
     public GameObject coinPrefabs;
     public GameObject slot1=null;
     public GameObject slot2=null;
-
+    public AudioSource audio;
     public List<GameObject> zombies;
 
     void Start()
@@ -76,11 +76,12 @@ public class PlantScript : MonoBehaviour
     }
     void shootbullet()
     {
+        
         //need sound and vfx here
         if (zombies.Count > 0 && isShoot == false)
         {
-            
-            
+            audio.Play();
+
             timeLeft -= Time.deltaTime;
             //Debug.Log(timeLeft);
             if (timeLeft < 0)
@@ -99,8 +100,9 @@ public class PlantScript : MonoBehaviour
             Debug.Log(isShoot);
             isShoot = false;
             Debug.Log("Im out");
+            
         }
-      
+        audio.Stop();
 
     }
     void spawnCoin()
