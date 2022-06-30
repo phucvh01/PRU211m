@@ -7,7 +7,7 @@ public class PowerupScript : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hitsomething");
+        //Debug.Log("Hitsomething");
         if (collision.gameObject.layer == 8)
         {
             Debug.Log("hit");

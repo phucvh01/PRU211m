@@ -8,19 +8,25 @@ public class ZombieSpawner : MonoBehaviour
 
     public List<ZombieScript> zombies;
     public List<GameObject> zombiePrefabs;
-    private bool stopSpawn= true;
+    public static bool stopSpawn=false;
     public int howMany;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+            ManuallySpawn();
+        
+        if (LoadingScript.playWarning == true &&stopSpawn==true)
+        {
 
-        ManuallySpawn();
-        RandomSpawn();
+            //RandomSpawn();
+            
+        }
     }
     void ManuallySpawn()
     {
@@ -36,27 +42,26 @@ public class ZombieSpawner : MonoBehaviour
             }
         }
     }
+    //could use invoke but slower than coroutine
     void RandomSpawn()
     {
-        if (LoadingScript.playWarning == true && stopSpawn == true)
+
+        for (int i = 0; i < howMany; i++)
         {
-            for (int i = 0; i < howMany; i++)
-            {
-                //can random zombie type time placement
-                ZombieScript zombie = new ZombieScript { type = ZombieType.normal, isSpawn = false, randomSpawner = true, Spawner = Random.Range(0, 5), spawnTime = Random.Range(1, 5) };
-                //Debug.Log(zombie.Spawner + " " + zombie.spawnTime);
-                //if (zombie.isSpawn == false && zombie.spawnTime < Time.time)
-                //{
-                //    GameObject zombieInstant = Instantiate(zombiePrefabs[(int)zombie.type], transform.GetChild(zombie.Spawner).transform);
-                //    zombie.isSpawn = true;
-                //    zombieInstant.GetComponent<ZombieController>().finalDestination = transform.GetChild(zombie.Spawner).GetComponent<SpawnPoint>().Destination;
-                //    transform.GetChild(zombie.Spawner).GetComponent<SpawnPoint>().zombies.Add(zombieInstant);
-                //}
-            }
-            stopSpawn = false;
+            //can random zombie type time placement
+            //read json here
+            ZombieScript zombie = new ZombieScript { type = ZombieType.normal, isSpawn = false, randomSpawner = true, Spawner = Random.Range(0, 5), spawnTime = Random.Range(1, 5) };
+            Debug.Log("Zombie number"+i+ " where he spawn: "+zombie.Spawner + " what time " + zombie.spawnTime);
+            zombies.Add(zombie);
+      
+           
+        } stopSpawn = false;
+
+     
 
 
 
-        }
     }
+
 }
+

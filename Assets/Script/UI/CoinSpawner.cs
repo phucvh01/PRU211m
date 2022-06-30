@@ -29,5 +29,9 @@ public class CoinSpawner : MonoBehaviour
        
     }
 
+    void OnBecameInvisible()
+    {
+         Destroy(this.gameObject);
+    }
 
 }
