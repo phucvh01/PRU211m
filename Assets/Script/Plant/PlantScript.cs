@@ -20,9 +20,13 @@ public class PlantScript : MonoBehaviour
     public GameObject coinPrefabs;
     public GameObject slot1=null;
     public GameObject slot2=null;
-
+    private Animator anim;
     public List<GameObject> zombies;
 
+    public void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
     void Start()
     {
 
@@ -60,6 +64,7 @@ public class PlantScript : MonoBehaviour
 
         if (Ptype == plantType.Shooter)
         {
+            
             //shoot ahead
             shootbullet();
             
@@ -79,8 +84,8 @@ public class PlantScript : MonoBehaviour
         //need sound and vfx here
         if (zombies.Count > 0 && isShoot == false)
         {
-            
-            
+            anim.SetBool("attack", true);
+
             timeLeft -= Time.deltaTime;
             //Debug.Log(timeLeft);
             if (timeLeft < 0)
@@ -95,6 +100,7 @@ public class PlantScript : MonoBehaviour
         }
         else if (zombies.Count == 0 && isShoot == true)
         {
+            anim.SetBool("attack", false);
             //Debug.Log(zombies.Count+"");
             Debug.Log(isShoot);
             isShoot = false;
