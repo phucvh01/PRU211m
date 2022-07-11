@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject draggingGameobject;
     public GameObject containerGameobject;
-    public GameObject powerupGameobject; 
+    //public GameObject powerupGameobject; 
     public static GameManager instance;
 
     private void Awake()
@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     }
     public void placePowerup()
     {
-
+        if (draggingGameobject != null)
+        {
+            Debug.Log("say h");
+        }
     }
 }

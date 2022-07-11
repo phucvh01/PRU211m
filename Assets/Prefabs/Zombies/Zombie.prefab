@@ -119,7 +119,7 @@ MonoBehaviour:
   finalDestination: {x: 0, y: 0, z: 0}
   Health: 10
   Damage: 1
-  Speed: 150
+  Speed: 95
   attackSpeed: 0
 --- !u!50 &-564628293662385091
 Rigidbody2D:

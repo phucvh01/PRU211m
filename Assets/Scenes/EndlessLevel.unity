@@ -8420,26 +8420,6 @@ MonoBehaviour:
     Spawner: 0
     randomSpawner: 1
     isSpawn: 0
-  - spawnTime: 3
-    type: 0
-    Spawner: 1
-    randomSpawner: 1
-    isSpawn: 0
-  - spawnTime: 10
-    type: 0
-    Spawner: 2
-    randomSpawner: 1
-    isSpawn: 0
-  - spawnTime: 37
-    type: 0
-    Spawner: 3
-    randomSpawner: 1
-    isSpawn: 0
-  - spawnTime: 38
-    type: 0
-    Spawner: 3
-    randomSpawner: 1
-    isSpawn: 0
   zombiePrefabs:
   - {fileID: 1568884363286161678, guid: 82a93d98af89dd24986ce0f99f86f4f5, type: 3}
   howMany: 10
@@ -9130,7 +9110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggingGameobject: {fileID: 0}
   containerGameobject: {fileID: 0}
-  powerupGameobject: {fileID: 0}
 --- !u!4 &2038252170
 Transform:
   m_ObjectHideFlags: 0

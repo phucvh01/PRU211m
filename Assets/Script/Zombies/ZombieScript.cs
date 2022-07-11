@@ -6,7 +6,7 @@ public class ZombieScript
 {
     // Start is called before the first frame update
  
-   public float spawnTime;
+    public float spawnTime;
     public ZombieType type;
     
     public int Spawner;

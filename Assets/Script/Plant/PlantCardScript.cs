@@ -43,6 +43,8 @@ public class PlantCardScript : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        //neu plant sale truoc thi khong co cooldown
+        //plant sale sau thi co cooldown nhung lai khong co tru tiewn
         plantSale();
         if (plantDrop == true)
         {
