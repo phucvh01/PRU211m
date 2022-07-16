@@ -9,8 +9,6 @@ public class PlantScript : MonoBehaviour
     public bool isShoot;
     public float Damage;
 
-    private Animator animator;
-
     public float timeLeft = 10f;
     public float waitTime = 10f;
     public enum plantType { Shooter, Bomber, Money }
@@ -25,10 +23,6 @@ public class PlantScript : MonoBehaviour
     //public AudioSource audio;
     public List<GameObject> zombies;
 
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
     void Start()
     {
 
@@ -86,7 +80,6 @@ public class PlantScript : MonoBehaviour
         //need sound and vfx here
         if (zombies.Count > 0 && isShoot == false)
         {
-            animator.SetBool("attack", true);
             //audio.Play();
 
             timeLeft -= Time.deltaTime;
@@ -103,7 +96,6 @@ public class PlantScript : MonoBehaviour
         }
         else if (zombies.Count == 0 && isShoot == true)
         {
-            animator.SetBool("attack", false);
             //Debug.Log(zombies.Count+"");
             Debug.Log(isShoot);
             isShoot = false;
