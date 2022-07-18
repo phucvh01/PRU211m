@@ -1072,6 +1072,7 @@ GameObject:
   - component: {fileID: 178077754}
   - component: {fileID: 178077756}
   - component: {fileID: 178077755}
+  - component: {fileID: 178077757}
   m_Layer: 5
   m_Name: Water
   m_TagString: Untagged
@@ -1137,6 +1138,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178077753}
   m_CullTransparentMesh: 1
+--- !u!114 &178077757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178077753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8a3b349c4edf84eb9f7da3c8565399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DragGameObject: {fileID: 5910230710853505974, guid: fe8dcf0adb3fd794187e50350a86d96e, type: 3}
+  Draggable: 1
+  canvas: {fileID: 1529730544}
 --- !u!1 &220134333
 GameObject:
   m_ObjectHideFlags: 0
@@ -4576,8 +4592,9 @@ GameObject:
   - component: {fileID: 792595759}
   - component: {fileID: 792595761}
   - component: {fileID: 792595760}
+  - component: {fileID: 792595762}
   m_Layer: 5
-  m_Name: Life
+  m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4600,8 +4617,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000014305, y: -372}
-  m_SizeDelta: {x: 226.05, y: 196.8859}
+  m_AnchoredPosition: {x: 12.052, y: -372}
+  m_SizeDelta: {x: 190.83, y: 196.8859}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792595760
 MonoBehaviour:
@@ -4641,6 +4658,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792595758}
   m_CullTransparentMesh: 1
+--- !u!114 &792595762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792595758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8a3b349c4edf84eb9f7da3c8565399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DragGameObject: {fileID: 5910230710853505974, guid: 6eb1bacd111050e4d85021fd0c14dda5, type: 3}
+  Draggable: 1
+  canvas: {fileID: 1529730544}
 --- !u!1 &807854432
 GameObject:
   m_ObjectHideFlags: 0
@@ -8340,16 +8372,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombies:
   - spawnTime: 1
-    type: 0
-    Spawner: 0
-    randomSpawner: 1
-    isSpawn: 0
-  - spawnTime: 2
-    type: 0
-    Spawner: 0
-    randomSpawner: 1
-    isSpawn: 0
-  - spawnTime: 3
     type: 0
     Spawner: 0
     randomSpawner: 1

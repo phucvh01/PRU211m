@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 172995492767057389}
   - component: {fileID: 172995492767057388}
   m_Layer: 11
-  m_Name: FireBullet
+  m_Name: EarthBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18059254, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.5849056, g: 0.31312552, b: 0.02979703, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
