@@ -15,11 +15,12 @@ public class PlantScript : MonoBehaviour
     public plantType Ptype;
 
     //need power type here
-    
+
     public GameObject bullet;
     public GameObject coinPrefabs;
-    public GameObject slot1=null;
-    public GameObject slot2=null;
+    public enum slot { Non, Fire, Ice, Earth };
+    public slot PowerUp;
+    public slot SecretPowerUp;
     //public AudioSource audio;
     public List<GameObject> zombies;
 
@@ -34,13 +35,13 @@ public class PlantScript : MonoBehaviour
             Damage = 10;
             timeLeft = 3f;
             waitTime = 3f;
-            
+
 
         }
         else if (Ptype == plantType.Bomber)
         {
             health = 100;
-            
+
 
         }
         else if (Ptype == plantType.Money)
@@ -48,8 +49,26 @@ public class PlantScript : MonoBehaviour
             health = 5;
             timeLeft = 3f;
             waitTime = 3f;
-            
+
             //spawn money here
+        }
+
+        if (PowerUp == slot.Fire)
+        {
+            //add hieu ung chay vao day?
+            bullet.GetComponent<BulletScript>().bulletDamage = 2;
+            bullet.GetComponent<BulletScript>().bulletSpeed = 2;
+        
+        }
+        else if (PowerUp == slot.Ice)
+        {
+
+
+
+        }
+        else if (PowerUp == slot.Earth)
+        {
+
         }
 
     }
@@ -62,7 +81,7 @@ public class PlantScript : MonoBehaviour
         {
             //shoot ahead
             shootbullet();
-            
+
 
         }
         else if (Ptype == plantType.Bomber)
@@ -76,7 +95,7 @@ public class PlantScript : MonoBehaviour
     }
     void shootbullet()
     {
-        
+
         //need sound and vfx here
         if (zombies.Count > 0 && isShoot == false)
         {
@@ -86,9 +105,12 @@ public class PlantScript : MonoBehaviour
             //Debug.Log(timeLeft);
             if (timeLeft < 0)
             {
-                //Debug.Log("Spawn here");
+              
                 timeLeft = waitTime;
-                var a = Instantiate(bullet, transform);
+                //spawn dan
+                var a = Instantiate(bullet, this.transform.position, Quaternion.identity);
+                a.transform.SetParent(transform);
+                Debug.Log(transform.position+ " check for bullet");
                 //Debug.Log("again");
                 isShoot = false;
             }
@@ -100,7 +122,7 @@ public class PlantScript : MonoBehaviour
             Debug.Log(isShoot);
             isShoot = false;
             Debug.Log("Im out");
-            
+
         }
         //audio.Stop();
 

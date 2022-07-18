@@ -26,13 +26,13 @@ public class BulletScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("HIt");
+        //Debug.Log("HIt");
         collision.gameObject.GetComponent<ZombieController>().receiveDamage(bulletDamage);
-        
+        //co the dung lam dan xuyen thau
         Destroy(this.gameObject);
     }
     void OnBecameInvisible()
     {
-        Destroy(this.gameObject);
+        Destroy(this);
     }
 }
