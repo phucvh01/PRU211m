@@ -24,6 +24,11 @@ public class PlantScript : MonoBehaviour
     //public AudioSource audio;
     public List<GameObject> zombies;
 
+    private Animator anim;
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
     void Start()
     {
 
@@ -100,7 +105,7 @@ public class PlantScript : MonoBehaviour
         if (zombies.Count > 0 && isShoot == false)
         {
             //audio.Play();
-
+            anim.SetBool("attack", true);
             timeLeft -= Time.deltaTime;
             //Debug.Log(timeLeft);
             if (timeLeft < 0)
@@ -118,6 +123,7 @@ public class PlantScript : MonoBehaviour
         }
         else if (zombies.Count == 0 && isShoot == true)
         {
+            anim.SetBool("attack", false);
             //Debug.Log(zombies.Count+"");
             Debug.Log(isShoot);
             isShoot = false;
