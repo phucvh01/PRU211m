@@ -67,13 +67,15 @@ public class PlantScript : MonoBehaviour
         }
         else if (PowerUp == slot.Ice)
         {
-
+            bullet.GetComponent<BulletScript>().bulletDamage = 2;
+            bullet.GetComponent<BulletScript>().bulletSpeed = 2;
 
 
         }
         else if (PowerUp == slot.Earth)
         {
-
+            bullet.GetComponent<BulletScript>().bulletDamage = 2;
+            bullet.GetComponent<BulletScript>().bulletSpeed = 2;
         }
 
     }
@@ -102,7 +104,7 @@ public class PlantScript : MonoBehaviour
     {
 
         //need sound and vfx here
-        if (zombies.Count > 0 && isShoot == false)
+        if (zombies.Count > 0)
         {
             //audio.Play();
             anim.SetBool("attack", true);
@@ -112,25 +114,16 @@ public class PlantScript : MonoBehaviour
             {
               
                 timeLeft = waitTime;
-                //spawn dan
                 var a = Instantiate(bullet, this.transform.position, Quaternion.identity);
                 a.transform.SetParent(transform);
-                Debug.Log(transform.position+ " check for bullet");
-                //Debug.Log("again");
-                isShoot = false;
+               
             }
 
         }
-        else if (zombies.Count == 0 && isShoot == true)
+        else if (zombies.Count == 0)
         {
             anim.SetBool("attack", false);
-            //Debug.Log(zombies.Count+"");
-            Debug.Log(isShoot);
-            isShoot = false;
-            Debug.Log("Im out");
-
         }
-        //audio.Stop();
 
     }
     void spawnCoin()
