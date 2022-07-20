@@ -19,7 +19,7 @@ public class PowerupScript : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         //shooterclass only
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 8 && collision.GetComponent<PlantScript>().Ptype.ToString() == "Shooter")
         {
 
             if (Input.GetMouseButton(0))
