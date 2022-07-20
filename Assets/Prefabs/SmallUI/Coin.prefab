@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6851830310225239960}
   - component: {fileID: 1134800461}
   - component: {fileID: 8948267421834513877}
+  - component: {fileID: 2566014977181388162}
   m_Layer: 5
   m_Name: Coin
   m_TagString: Untagged
@@ -38,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 28.257818, y: -7.8043985}
-  m_SizeDelta: {x: 156.5156, y: 115.6087}
+  m_SizeDelta: {x: 96, y: 95.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6851830310225239967
 CanvasRenderer:
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4bc28beec221be547941240ecb9815f5, type: 3}
+  m_Sprite: {fileID: 546937364, guid: e8c93883d6039914488ed85174cec72f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -189,3 +190,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &2566014977181388162
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6851830310225239962}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6cc904b1dc0aac3489b0ed8bb9461b81, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
