@@ -15,7 +15,12 @@ public class ZombieController : MonoBehaviour
     private bool isAttack;
     #endregion
     private bool isStopped;
-    
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
     private GameObject getPlantHealth;
     private void Start()
     {
@@ -27,10 +32,12 @@ public class ZombieController : MonoBehaviour
     {
         if (!isStopped)
         {
+            anim.SetBool("walker_attack", false);
             transform.Translate(new Vector3(Speed * -1, 0, 0)*Time.deltaTime);
         }
         if (isAttack)
         {
+            anim.SetBool("walker_attack", true);
             attackSpeed -= Time.deltaTime;
             if (attackSpeed < 0)
             {
@@ -83,6 +90,7 @@ public class ZombieController : MonoBehaviour
     {
         if (Health - damage <= 0)
         {
+            //anim.SetBool("walker_dead", true);
             transform.parent.GetComponent<SpawnPoint>().zombies.Remove(this.gameObject);
             Destroy(this.gameObject);
         }
