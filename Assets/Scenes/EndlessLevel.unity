@@ -8473,14 +8473,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombies:
   - spawnTime: 0
-    type: 0
+    type: 1
     Spawner: 0
     randomSpawner: 1
     isSpawn: 0
   zombiePrefabs:
   - {fileID: 1568884363286161678, guid: 82a93d98af89dd24986ce0f99f86f4f5, type: 3}
-  - {fileID: 1568884363286161678, guid: dd1914c257c372244b0389562c77aa56, type: 3}
   - {fileID: 1568884363286161678, guid: 0914be298a392184799ee6bf4bbe40a4, type: 3}
+  - {fileID: 1568884363286161678, guid: dd1914c257c372244b0389562c77aa56, type: 3}
   howMany: 10
 --- !u!1 &1864046375
 GameObject:
