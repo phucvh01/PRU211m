@@ -1151,7 +1151,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DragGameObject: {fileID: 5910230710853505974, guid: fe8dcf0adb3fd794187e50350a86d96e, type: 3}
   Draggable: 1
+  Game_Plant: {fileID: 6422381773118457625, guid: f89d48343ef684a48b7b1d153606ac04, type: 3}
   canvas: {fileID: 1529730544}
+  gameManager: {fileID: 0}
+  cost: 0
 --- !u!1 &220134333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,7 +3348,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DragGameObject: {fileID: 5910230710853505974, guid: a252db28cb2d25a47900185bb3d97ea8, type: 3}
   Draggable: 1
+  Game_Plant: {fileID: 6422381773118457625, guid: 3d44ad4a0b186fc49868efa7716088da, type: 3}
   canvas: {fileID: 1529730544}
+  gameManager: {fileID: 0}
+  cost: 10
 --- !u!1 &540353791
 GameObject:
   m_ObjectHideFlags: 0
@@ -4672,7 +4678,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DragGameObject: {fileID: 5910230710853505974, guid: 6eb1bacd111050e4d85021fd0c14dda5, type: 3}
   Draggable: 1
+  Game_Plant: {fileID: 6422381773118457625, guid: 998f6e1793910d64597519da3ceb7cfd, type: 3}
   canvas: {fileID: 1529730544}
+  gameManager: {fileID: 0}
+  cost: 0
 --- !u!1 &807854432
 GameObject:
   m_ObjectHideFlags: 0
@@ -8370,14 +8379,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b198cc40fce1304d8c45fe2c903bb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombies:
-  - spawnTime: 1
-    type: 0
-    Spawner: 0
-    randomSpawner: 1
-    isSpawn: 0
+  zombies: []
   zombiePrefabs:
   - {fileID: 1568884363286161678, guid: 82a93d98af89dd24986ce0f99f86f4f5, type: 3}
+  - {fileID: 1568884363286161678, guid: dd1914c257c372244b0389562c77aa56, type: 3}
+  - {fileID: 1568884363286161678, guid: 0914be298a392184799ee6bf4bbe40a4, type: 3}
   howMany: 10
 --- !u!1 &1864046375
 GameObject:

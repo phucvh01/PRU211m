@@ -6,5 +6,6 @@ public class ObjectDragging : MonoBehaviour
 {
     // Start is called before the first frame update
     public PlantCardScript card;
+    public PowerupController power;
 
 }

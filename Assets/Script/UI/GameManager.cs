@@ -25,11 +25,15 @@ public class GameManager : MonoBehaviour
             containerGameobject.GetComponent<ContainerScript>().isFull = true;
         }
     }
-    public void placePowerup()
-    {
-        if (draggingGameobject != null)
-        {
-            Debug.Log("say h");
-        }
-    }
+    //public void placePowerup()
+    //{
+    //    if (draggingGameobject != null)
+    //    {
+    //        Debug.Log("say h");
+    //        Destroy((containerGameobject.transform.GetChild(0).gameObject));
+    //        GameObject objectGame = Instantiate(draggingGameobject.GetComponent<ObjectDragging>().power.Game_Plant, containerGameobject.transform);
+    //        objectGame.GetComponent<PlantScript>().zombies = containerGameobject.GetComponent<ContainerScript>().spawnPoint.zombies;
+    //        containerGameobject.GetComponent<ContainerScript>().isFull = true;
+    //    }
+    //}
 }

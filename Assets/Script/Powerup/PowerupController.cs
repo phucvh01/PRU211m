@@ -8,10 +8,15 @@ public class PowerupController : MonoBehaviour, IPointerDownHandler, IDragHandle
     public GameObject DragGameObject;
     public bool Draggable;
     private GameObject objectDragInstatiate;
-    
+    //public GameObject Game_Plant;
     public Canvas canvas;
+    public GameManager gameManager;
+    public int cost;
+    private void Start()
+    {
+        gameManager = GameManager.instance;
+    }
 
-   
     public void OnDrag(PointerEventData eventData)
     {
         objectDragInstatiate.transform.position = Input.mousePosition;
@@ -21,10 +26,15 @@ public class PowerupController : MonoBehaviour, IPointerDownHandler, IDragHandle
     {
         objectDragInstatiate = Instantiate(DragGameObject, canvas.transform);
         objectDragInstatiate.transform.position = Input.mousePosition;
+
+        //GameManager.instance.draggingGameobject = objectDragInstatiate;
+        //objectDragInstatiate.GetComponent<ObjectDragging>().power = this;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        //CoinSpawner.coin = CoinSpawner.coin - cost;
+        //gameManager.pla();
         //same as plant but different
         Destroy(objectDragInstatiate);
     }
