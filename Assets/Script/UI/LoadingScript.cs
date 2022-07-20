@@ -29,7 +29,7 @@ public class LoadingScript : MonoBehaviour
 
 
         }
-        if (slider.value == 50 || slider.value == 100)
+        if (slider.value == 50 || slider.value == 95)
         {
             playWarning = true;
             ZombieSpawner.stopSpawn = true;

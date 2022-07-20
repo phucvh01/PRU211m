@@ -33,7 +33,8 @@ public class PowerupController : MonoBehaviour, IPointerDownHandler, IDragHandle
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        //CoinSpawner.coin = CoinSpawner.coin - cost;
+        
+        CoinSpawner.coin = CoinSpawner.coin - cost;
         //gameManager.pla();
         //same as plant but different
         Destroy(objectDragInstatiate);

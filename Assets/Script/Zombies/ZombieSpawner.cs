@@ -1,4 +1,4 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,13 +19,17 @@ public class ZombieSpawner : MonoBehaviour
     void Update()
     {
         
-            ManuallySpawn();
+          
         
         if (LoadingScript.playWarning == true &&stopSpawn==true)
         {
 
             //RandomSpawn();
-            
+
+        }
+        else
+        {
+            ManuallySpawn();
         }
     }
     void ManuallySpawn()
@@ -50,15 +54,14 @@ public class ZombieSpawner : MonoBehaviour
         {
             //can random zombie type time placement
             //read json here
-            ZombieScript zombie = new ZombieScript { type = ZombieType.normal, isSpawn = false, randomSpawner = true, Spawner = Random.Range(0, 5), spawnTime = Random.Range(1, 5) };
+            ZombieType zomb = (ZombieType)Random.Range(0, 2);
+            ZombieScript zombie = new ZombieScript { type =zomb, isSpawn = false, randomSpawner = true, Spawner = Random.Range(0, 5), spawnTime = Random.Range(1, 5) };
             Debug.Log("Zombie number"+i+ " where he spawn: "+zombie.Spawner + " what time " + zombie.spawnTime);
+            
             zombies.Add(zombie);
-      
+            
            
         } stopSpawn = false;
-
-     
-
 
 
     }

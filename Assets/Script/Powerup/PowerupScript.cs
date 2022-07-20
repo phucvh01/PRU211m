@@ -24,13 +24,13 @@ public class PowerupScript : MonoBehaviour
 
             if (Input.GetMouseButton(0))
             {
+
                 Debug.Log("Hitsomethinghere");
 
                 GameObject a = Instantiate(PlantObjectPower, collision.transform.parent);
                 a.GetComponent<PlantScript>().zombies = collision.GetComponent<PlantScript>().zombies;
 
-                Debug.Log(a.transform.position);
-                Debug.Log("here release");
+               
 
                 Destroy(collision.gameObject);
 
