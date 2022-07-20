@@ -8,13 +8,25 @@ public class CoinScript : MonoBehaviour, IPointerDownHandler
     // Start is called before the first frame update
     public float speedFall;
     public GameObject destination;
+    public AudioSource audioSource;
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        audioSource.Play();
+        
         CoinSpawner.coin++;
-     
+        StartCoroutine(die());
+
+        
+    }
+
+     IEnumerator die()
+    {
+        yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }
+
+  
 
     void Start()
     {

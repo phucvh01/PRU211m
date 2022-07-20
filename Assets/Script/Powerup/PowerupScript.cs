@@ -21,7 +21,6 @@ public class PowerupScript : MonoBehaviour
         //shooterclass only
         if (collision.gameObject.layer == 8 && collision.GetComponent<PlantScript>().Ptype.ToString() == "Shooter")
         {
-
             if (Input.GetMouseButton(0))
             {
 
@@ -29,6 +28,7 @@ public class PowerupScript : MonoBehaviour
 
                 GameObject a = Instantiate(PlantObjectPower, collision.transform.parent);
                 a.GetComponent<PlantScript>().zombies = collision.GetComponent<PlantScript>().zombies;
+                
 
                
 

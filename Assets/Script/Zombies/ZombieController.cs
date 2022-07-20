@@ -16,9 +16,12 @@ public class ZombieController : MonoBehaviour
     #endregion
     private bool isStopped;
     private Animator anim;
+    public AudioSource audio;
+    public AudioSource ZombieRecieve_audio;
 
     private void Awake()
     {
+        audio.Play();
         anim = GetComponent<Animator>();
     }
     private GameObject getPlantHealth;
@@ -98,6 +101,7 @@ public class ZombieController : MonoBehaviour
         {
             
             Health = Health - damage;
+            ZombieRecieve_audio.Play();
             //Debug.Log(Health);
         }
     }
@@ -120,5 +124,10 @@ public class ZombieController : MonoBehaviour
            
             //Debug.Log(healthh+"");
         }
+    }
+    IEnumerator die()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Destroy(this.gameObject);
     }
 }
