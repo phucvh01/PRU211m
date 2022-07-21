@@ -45,14 +45,14 @@ public class PlantScript : MonoBehaviour
         }
         else if (Ptype == plantType.Bomber)
         {
-            health = 100;
+            health = 50;
 
 
         }
         else if (Ptype == plantType.Money)
         {
             health = 5;
-            timeLeft = 3f;
+            timeLeft = 6f;
             waitTime = 3f;
 
             //spawn money here
@@ -134,7 +134,7 @@ public class PlantScript : MonoBehaviour
 
             timeLeft = waitTime;
             var a = Instantiate(coinPrefabs, transform.position, coinPrefabs.transform.rotation, this.transform);
-            a.GetComponent<CoinScript>().speedFall = 1f;
+            a.GetComponent<CoinScript>().speedFall = 0f;
 
         }
 

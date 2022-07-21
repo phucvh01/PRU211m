@@ -23,14 +23,15 @@ public class ZombieSpawner : MonoBehaviour
         
         if (LoadingScript.playWarning == true &&stopSpawn==true)
         {
-
-            //RandomSpawn();
+            if (Input.GetKeyDown(KeyCode.Alpha0)) {  
+                RandomSpawn();
+            }
+           
 
         }
-        else
-        {
+     
             ManuallySpawn();
-        }
+        
     }
     void ManuallySpawn()
     {
@@ -49,7 +50,7 @@ public class ZombieSpawner : MonoBehaviour
     //could use invoke but slower than coroutine
     void RandomSpawn()
     {
-
+        
         for (int i = 0; i < howMany; i++)
         {
             //can random zombie type time placement

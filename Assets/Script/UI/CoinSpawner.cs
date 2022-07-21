@@ -9,7 +9,7 @@ public class CoinSpawner : MonoBehaviour
     public GameObject coinPool;
     public float timeLeft=10f;
     public Text coinText;
-    public static int coin =1000;
+    public static int coin =50;
     private void Update()
     {
         timeLeft -= Time.deltaTime;

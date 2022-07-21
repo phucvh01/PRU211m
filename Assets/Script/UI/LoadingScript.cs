@@ -19,7 +19,7 @@ public class LoadingScript : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        float realTime = 60f / 100f;
+        float realTime = 600f / 100f;
         Timer += Time.deltaTime;
 
         if (Timer >= realTime)

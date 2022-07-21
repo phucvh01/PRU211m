@@ -16,6 +16,7 @@ public class GameStateManager : MonoBehaviour
         isLost = false;
         Debug.Log("have replay");
         loseGameState.SetActive(false);
+        Time.timeScale = 1f;
     }
     void Start()
     {
@@ -28,6 +29,8 @@ public class GameStateManager : MonoBehaviour
         if (isLost == true)
         {
             loseGameState.SetActive(true);
+            Time.timeScale = 0f;
+            
         }
     }
     public void ReplayGame()

@@ -3,22 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CoinScript : MonoBehaviour, IPointerDownHandler
+public class CoinScript : MonoBehaviour, IPointerDownHandler, IPointerClickHandler
 {
     // Start is called before the first frame update
     public float speedFall;
     public GameObject destination;
     public AudioSource audioSource;
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        audioSource.Play();
+        throw new System.NotImplementedException();
+    }
+
+   
+    void OnGUI()
+    {
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            audioSource.Play();
+            
+            CoinSpawner.coin += 5;
+            StartCoroutine(die());
+        }
+    }
+
+        public void OnPointerDown(PointerEventData eventData)
+    {
+    //    audioSource.Play();
         
-        CoinSpawner.coin++;
-        StartCoroutine(die());
+    //    CoinSpawner.coin=CoinSpawner.coin+10;
+    //    StartCoroutine(die());
 
         
     }
+
+
 
      IEnumerator die()
     {

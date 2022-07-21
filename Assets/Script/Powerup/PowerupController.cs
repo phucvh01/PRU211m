@@ -19,13 +19,18 @@ public class PowerupController : MonoBehaviour, IPointerDownHandler, IDragHandle
 
     public void OnDrag(PointerEventData eventData)
     {
+
         objectDragInstatiate.transform.position = Input.mousePosition;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (CoinSpawner.coin >= cost) { 
         objectDragInstatiate = Instantiate(DragGameObject, canvas.transform);
         objectDragInstatiate.transform.position = Input.mousePosition;
+            CoinSpawner.coin -= cost;
+        }
+       
 
         //GameManager.instance.draggingGameobject = objectDragInstatiate;
         //objectDragInstatiate.GetComponent<ObjectDragging>().power = this;
@@ -34,7 +39,7 @@ public class PowerupController : MonoBehaviour, IPointerDownHandler, IDragHandle
     public void OnPointerUp(PointerEventData eventData)
     {
         
-        CoinSpawner.coin = CoinSpawner.coin - cost;
+      
         //gameManager.pla();
         //same as plant but different
         Destroy(objectDragInstatiate);
